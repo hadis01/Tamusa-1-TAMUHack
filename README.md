@@ -63,8 +63,19 @@ while True:
         count = 0 
 
 for xmin, ymin, xmax, ymax in list_boxes: 
-    image np = cv2.rectangle (image_np, pt1(int(xmin), int(ymin))
+    image_np = cv2.rectangle(image_np, pt1(int(xmin), int(ymin)), pt2=(int(xmax),int(ymax)),\
                 color=(255,0,0), thickness=2)
-    cv2.putText(image_np, f"{labels[count]}: {round(score[count],2)}", (int(xmin),int(ymin c)) 
+    cv2.putText(image_np, f"{labels[count]}: {round(score[count],2)}", (int(xmin),int(ymin)-10), 
+    cv2.FONT_HERSHEY_SIMPLEXF, 0.9, (36,255,12), 2)
+    count = count + 1
+
+cv2.imshow('Object Detector', image_np);
+
+if cv2.waitKey(1) & 0xFF == ord('q'):
+    cap.release()
+    cv2.release()
+    cv2.destroyAllWindows()
+    break
 
 
+ 
