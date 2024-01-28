@@ -28,7 +28,6 @@ YOLOV5s summary: 213 layers, 7225885 parameters, 0 gradients
 Adding AutoShape  
 ## May not need auto shape just need to detect object
 
-
 In [3]: imgs = [https://ultralytics.com/images/zidane.jpg']
 Image(url=imgs[0])
 
@@ -76,6 +75,3 @@ if cv2.waitKey(1) & 0xFF == ord('q'):
     cv2.release()
     cv2.destroyAllWindows()
     break
-
-
- 
